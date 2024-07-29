@@ -1,0 +1,115 @@
+.qa {
+  width: 100%;
+  margin: 0 auto;
+  background: #f6f5f7;
+  border-radius: 10px;
+  padding: 50px 0;
+
+  .qaWrapper {
+    width: 100%;
+    max-width: 967px;
+    margin: 0 auto;
+
+    h2 {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 112%;
+      text-align: center;
+      color: #445be7;
+      padding-bottom: 45px;
+    }
+
+    .questionsList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 30px;
+
+      .questionsWrapper {
+        width: 100%;
+        height: 84px;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+        background: #fffeff;
+        padding: 0 30px;
+        border-radius: 10px;
+
+        &.active {
+          height: 190px;
+          transition: .3s ease-in-out;
+        }
+
+
+
+        .question {
+          width: 100%;
+          height: 84px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: none;
+          outline: none;
+          background: #fffeff;
+          border-radius: 10px;
+          gap: 40px;
+          .questionWrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .iconLogo {
+              border-radius: 10px;
+              width: 66px;
+              height: 66px;
+              background: #445be7;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            span {
+              max-width: 720px;
+              font-family: var(--font-family);
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 112%;
+              color: #131313;
+
+              text-align: start;
+
+            }
+          }
+
+          .icon {
+            width: 40px;
+            height: 40px;
+            background-color: #445be7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: .3s ease-in-out;
+
+            &.active {
+              rotate: 90deg;
+              transition: .3s ease-in-out;
+            }
+          }
+        }
+
+        p {
+          padding-top: 20px;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 112%;
+          color: #131313;
+        }
+      }
+    }
+
+  }
+
+}

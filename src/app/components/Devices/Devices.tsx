@@ -31,7 +31,7 @@ export default function Devices() {
         </div>
         <div className={styles.cards}>
           {cardDevice.map((item) => (
-            <div className={styles.card} key={item.id}>
+            <div className={styles.card} key={item.id + Math.random()}>
               <div className={styles.cardInfo}>
                 <Image src={`/img/devices/${item.name}.${item.format}`} width={63} height={63} alt="svg" />
                 <span>{item.title}</span>

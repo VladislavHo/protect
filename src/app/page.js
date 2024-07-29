@@ -3,6 +3,8 @@ import Fast from './components/Fast/Fast'
 import styles from "./page.module.css";
 import Devices from './components/Devices/Devices';
 import Safety from './components/Safety/Safety';
+import AboutServices from './components/AboutServices/AboutServices';
+import QA from './components/QA/QA';
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <Fast />
       <Devices />
       <Safety/>
+      <AboutServices/>
+      <QA/>
     </>
   );
 }
