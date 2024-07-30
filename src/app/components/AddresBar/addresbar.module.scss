@@ -12,6 +12,9 @@
     &.white {
       background: #ececec;
     }
+    &.blue{
+      background: #5d72f3;
+    }
     .leftComponents {
       display: flex;
       align-items: center;
@@ -23,6 +26,9 @@
         color: #27ae60;
         &.white{
           color: #5d72f3;
+        }
+        &.blue{
+          color: #c3cbff;
         }
       }
     }

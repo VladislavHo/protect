@@ -1,8 +1,8 @@
 import React from "react";
 import AddresBar from "../AddresBar/AddresBar";
-// import styles from './ratesintro.module.css'
+
 import styles from "./rates_intro.module.scss";
-export default function RatesIntro() {
+export default function IntroRates() {
   return (
     <section className={styles.ratesIntro}>
       <div className={styles.ratesIntroWrapper}>

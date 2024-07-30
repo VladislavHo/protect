@@ -1,7 +1,7 @@
 // import React from "react";
 import Image from "next/image";
 import styles from "./intro.module.scss";
-import ButtonDark from "../Buttons/ButtonDark";
+import ButtonDark from "../Buttons/ButtonDefault";
 export default function Intro() {
   return (
     <>
@@ -31,10 +31,6 @@ export default function Intro() {
         </div>
 
         <div className={styles.linkWrapper}>
-          {/* <a className={styles.link} href="#">
-            <span>Разблокировать доступ в свободный веб-мир!</span>
-            <Image src="/svg/arrow-white.svg" width={50} height={50} alt="arrow"/>
-          </a> */}
           <ButtonDark title="Разблокировать доступ в свободный веб-мир!" colorSvg={"#F5F5F5"} theme={"dark"}/>
         </div>
       </div>

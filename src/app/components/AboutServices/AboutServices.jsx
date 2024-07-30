@@ -1,7 +1,7 @@
-import ButtonDark from "../Buttons/ButtonDark";
+import ButtonDefault from "../Buttons/ButtonDefault";
 import styles from "./about.module.scss";
 import Image from "next/image";
-
+import AboutServicesScreen from "./AboutServicesScreen";
 
 export default function AboutServices() {
   return (
@@ -13,11 +13,11 @@ export default function AboutServices() {
             <span> Один Клик до Безопасности!</span>
           </h2>
 
-          <div className={styles.screenPhone}>
-            <h4>Интуитивно понятный дизайн интерфейса</h4>
-            <Image src={"/img/PhoneScreen.png"} width={531} height={610} alt="phone" />
+         <AboutServicesScreen title="Интуитивно понятный дизайн интерфейса" />
+          <div className={styles.buttonWrapper}>
+
+            <ButtonDefault title="Защита, свобода? Легко! Просто Кликни!" colorSvg={"#F5F5F5"} theme={"dark"} />
           </div>
-          <ButtonDark title="Защита, свобода? Легко! Просто Кликни!" colorSvg={"#F5F5F5"} theme={"dark"}/>
 
           <div className={styles.supports}>
             <h4>Наша Поддержка всегда на связи и готова помочь!</h4>
@@ -29,9 +29,9 @@ export default function AboutServices() {
               <Image src={"/img/flow/Flow_blue_2.png"} width={100} height={130} alt="phone" />
 
             </div>
-            <div className={styles.buttonContainer}>
+            <div className={styles.buttonWrapper}>
 
-              <ButtonDark title="Связаться с нами в Telegram" colorSvg={"#F5F5F5"} theme={"dark"}/>
+              <ButtonDefault title="Связаться с нами в Telegram" colorSvg={"#F5F5F5"} theme={"dark"} />
             </div>
           </div>
         </div>

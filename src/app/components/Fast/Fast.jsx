@@ -3,14 +3,13 @@ import Image from "next/image";
 import AddresBar from "../AddresBar/AddresBar";
 import { flags } from "../../variables/variables";
 import ButtonGreen from "../Buttons/ButtonGreen";
-import ButtonDark from "../Buttons/ButtonDark";
-
+import ButtonDefault from "../Buttons/ButtonDefault";
 
 export default function Fast() {
   return (
     <section className={styles.fast}>
       <div className={styles.fastLayout}>
-        <AddresBar theme={"dark"}/>
+        <AddresBar theme={"dark"} />
         <div className={styles.speed}>
           <div className={styles.titleWrapperFast}>
             <span className={styles.span}>Быстрый.</span>
@@ -111,9 +110,15 @@ export default function Fast() {
               width={403}
               height={89}
               alt={"flow"}
-              />
+            />
           </div>
-          <ButtonDark title={"Открыть веб-мир с ProtektVPN!"} colorSvg={"#ABFFCF"} theme={"green"}/>
+          <div className={styles.wrapperButton}>
+            <ButtonDefault
+              title={"Открыть веб-мир с ProtektVPN!"}
+              colorSvg={"#ABFFCF"}
+              theme={"green"}
+            />
+          </div>
           <Image
             src={"/img/flow/Flow_green_3.png"}
             width={439}

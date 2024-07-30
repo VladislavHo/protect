@@ -36,7 +36,7 @@
         border-radius: 10px;
 
         &.active {
-          height: 190px;
+          // height: 190px;
           transition: .3s ease-in-out;
         }
 
@@ -109,7 +109,14 @@
         }
       }
     }
-
+    .buttonWrapper{
+      width: 100%;
+      button{
+        span{
+          font-size: 24px;
+        }
+      }
+    }
   }
 
 }

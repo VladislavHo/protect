@@ -137,7 +137,7 @@ export const ratesCard = [
     price: 119,
     included: ["Защита для одного устройства", "Надёжный доступ без блокировок", "Выгодная стоимость", "Идеален для личного пользования", "Простое и быстрое подключение"],
     themeColor: "white",
-    logoServices: null
+    logoServices: null,
   },
   {
     id: 2,

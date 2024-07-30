@@ -48,3 +48,33 @@
   justify-content: center;
   gap: 24px;
 }
+
+@mixin buttonStyleWhite {
+  background: #eef0ff;
+  border-radius: 10px;
+  padding: 17px 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: .3s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+@mixin buttonStyleBlue {
+  background: #eef0ff;
+  border-radius: 10px;
+  padding: 17px 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: .3s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}

@@ -312,7 +312,16 @@
           }
         }
       }
-
+      .wrapperButton{
+        width: 100%;
+        position: relative;
+        top: -25px;
+        button{
+          span{
+            font-size: 34px;
+          }
+        }
+      } 
 
     }
     .greenFlow{

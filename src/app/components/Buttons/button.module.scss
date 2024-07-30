@@ -1,34 +1,46 @@
 @import "../../styles/mixins.scss";
 
-.buttonGreen {
+.buttonDefault {
   width: 100%;
-  position: relative;
-  top: -25px;
-  @include buttonStyleGreen();
   z-index: 0;
-
-  span {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 36px;
-    color: #abffcf;
-
-  }
-
-  &:hover {
-    background-color: #27402c;
-    transition: .3s ease-in-out;
-  }
-}
-
-.buttonDark {
-  width: 100%;
-  @include buttonStyleDark();
-
-  span {
+  cursor: pointer;
+  span{
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 24px;
-    color: #fff;
   }
+  &.dark {
+    @include buttonStyleDark();
+    span{
+      color: #fff;
+    }
+  }
+  &.blue {
+    @include buttonStyleBlue();
+    span{
+      color:#445be7
+    }
+
+  }
+  &.white {
+    @include buttonStyleDark();
+    span{
+      color: #fff;
+    }
+
+  }
+  &.green{
+    @include buttonStyleGreen();
+    span{
+      color: #abffcf;
+    }
+  }
+
+
+
+  // &:hover {
+  //   background-color: #27402c;
+  //   transition: .3s ease-in-out;
+  // }
 }
+

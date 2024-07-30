@@ -191,7 +191,8 @@
 
       .comment {
         align-self: flex-end;
-        span{
+
+        span {
           font-family: var(--font-family);
           font-weight: 700;
           font-size: 24px;
@@ -200,6 +201,18 @@
         }
 
       }
+
+
+    }
+
+    .buttonWrapper {
+      width: 100%;
+      button {
+        span {
+          font-size: 36px;
+        }
+      }
+
     }
 
   }

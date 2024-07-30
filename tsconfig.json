@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/rates/layout.js", "src/app/rates/page.jsx", "src/app/components/QA/QA.jsx", "src/app/components/Footer/Footer.jsx", "src/app/components/Devices/Devices.jsx", "src/app/components/Buttons/ButtonDark.jsx", "src/app/components/Buttons/ButtonGreen.jsx"  ],
+, "src/app/rates/layout.js", "src/app/rates/page.jsx", "src/app/components/QA/QA.jsx", "src/app/components/Footer/Footer.jsx", "src/app/components/Devices/Devices.jsx", "src/app/components/Buttons/ButtonDefault.jsx", "src/app/components/Buttons/ButtonGreen.jsx", "src/app/components/RatesCards/RatesCardsWrapper.jsx", "src/app/components/AboutServices/AboutServices.jsx"  ],
   "exclude": [
     "node_modules"
   ]

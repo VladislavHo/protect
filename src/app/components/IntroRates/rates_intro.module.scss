@@ -1,16 +1,18 @@
 .ratesIntro {
-  margin-top: 100px;
+  // 
   width: 100%;
   background-color: #f5f5f5;
   border-radius: 10px;
+  padding: 30px 0;
   .ratesIntroWrapper {
     max-width: 1164px;
     margin: 0 auto;
     background-color: #f5f5f5;
-    padding: 30px 0;
+    // padding: 30px 0;
+    // padding-bottom: 30px;
     .title {
+      margin-top: 30px;
       background-color: #ececec;
-      margin: 30px 0;
       padding: 30px;
       border-radius: 20px;
       position: relative;
@@ -37,8 +39,6 @@
           line-height: 1.15;
           font-weight: 700;
           color: rgb(19, 19, 19);
-
-          &:nth-of-type(1) {}
 
           &:nth-of-type(2) {
             padding: 5px 10px;

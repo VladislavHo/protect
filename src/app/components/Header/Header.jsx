@@ -7,15 +7,15 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul>
           <li className={styles.logo}>
-            <a href="">
+            <a href="/">
               <Image src="/logo.png" width={40} height={40} alt="logo" />
             </a>
           </li>
           <li>
-            <a href="rates">Тарифы</a>
+            <a href="/rates">Тарифы</a>
           </li>
           <li>
-            <a href="">О компании</a>
+            <a href="/company">О компании</a>
           </li>
           <li className={styles.authLink}>
             <a href="">

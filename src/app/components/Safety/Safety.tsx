@@ -2,15 +2,14 @@ import React from 'react'
 
 import styles from './safety.module.scss'
 import AddresBar from '../AddresBar/AddresBar'
-import ButtonGreen from '../Buttons/ButtonGreen'
 import Image from 'next/image'
-import ButtonDark from '../Buttons/ButtonDark'
+import ButtonDefault from '../Buttons/ButtonDefault'
 export default function Safety() {
   return (
     <section className={styles.safety}>
       <div className={styles.safetyWrapper}>
         <div className={styles.safetyContent}>
-          <AddresBar theme={"dark"}/>
+          <AddresBar theme={"dark"} />
           <h2>
             <span>Безопасность, которой Вы можете</span>
             <span>Доверять!</span>
@@ -62,7 +61,10 @@ export default function Safety() {
               <span>Shh...</span>
             </div>
           </div>
-          <ButtonDark title={'Стать невидимым в мире веба'} colorSvg={"#F5F5F5"} theme={"green"}/>
+          <div className={styles.buttonWrapper}>
+
+            <ButtonDefault title={'Стать невидимым в мире веба'} colorSvg={"#F5F5F5"} theme={"green"} />
+          </div>
 
         </div>
       </div>
