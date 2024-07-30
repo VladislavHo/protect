@@ -209,8 +209,6 @@
         align-items: center;
         gap: 27px;
 
-        img {}
-
         h2 {
           font-family: var(--font-family);
           font-weight: 700;
@@ -254,7 +252,6 @@
           justify-content: center;
           z-index: 2;
 
-          img {}
         }
       }
     }
@@ -282,7 +279,6 @@
         z-index: 1;
         position: relative;
         top: -8px;
-        img {}
 
         .icon {
           display: flex;

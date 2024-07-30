@@ -2,7 +2,6 @@ import styles from "./fast.module.scss";
 import Image from "next/image";
 import AddresBar from "../AddresBar/AddresBar";
 import { flags } from "../../variables/variables";
-import ButtonGreen from "../Buttons/ButtonGreen";
 import ButtonDefault from "../Buttons/ButtonDefault";
 
 export default function Fast() {

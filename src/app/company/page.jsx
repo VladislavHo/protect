@@ -1,7 +1,6 @@
 import React from 'react'
 import IntroCompany from '../components/IntroCompany/IntroCompany'
 import styles from './company.module.scss'
-import AboutServicesScreen from '../components/AboutServices/AboutServicesScreen'
 import Safety from '../components/Safety/Safety'
 import QA from '../components/QA/QA'
 
