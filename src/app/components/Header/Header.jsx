@@ -12,7 +12,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="">Тарифы</a>
+            <a href="rates">Тарифы</a>
           </li>
           <li>
             <a href="">О компании</a>

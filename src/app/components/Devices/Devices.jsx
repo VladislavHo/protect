@@ -37,7 +37,7 @@ export default function Devices() {
                 <span>{item.title}</span>
               </div>
 
-              <ButtonDark title={`Скачать для ${item.title}`} />
+              <ButtonDark title={`Скачать для ${item.title}`}  colorSvg={"#F5F5F5"} theme={"dark"}/>
             </div>
           ))}
         </div>

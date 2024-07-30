@@ -36,7 +36,7 @@ export default function QA() {
             </div>
           ))}
         </div>
-        <ButtonDark title={"Разблокировать доступ в свободный веб-мир!"} />
+        <ButtonDark title={"Разблокировать доступ в свободный веб-мир!"} colorSvg={"#F5F5F5"}/>
       </div>
     </div>
   )

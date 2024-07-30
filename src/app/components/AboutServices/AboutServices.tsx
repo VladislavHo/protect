@@ -17,7 +17,7 @@ export default function AboutServices() {
             <h4>Интуитивно понятный дизайн интерфейса</h4>
             <Image src={"/img/PhoneScreen.png"} width={531} height={610} alt="phone" />
           </div>
-          <ButtonDark title="Защита, свобода? Легко! Просто Кликни!" />
+          <ButtonDark title="Защита, свобода? Легко! Просто Кликни!" colorSvg={"#F5F5F5"} theme={"dark"}/>
 
           <div className={styles.supports}>
             <h4>Наша Поддержка всегда на связи и готова помочь!</h4>
@@ -31,7 +31,7 @@ export default function AboutServices() {
             </div>
             <div className={styles.buttonContainer}>
 
-              <ButtonDark title="Связаться с нами в Telegram" />
+              <ButtonDark title="Связаться с нами в Telegram" colorSvg={"#F5F5F5"} theme={"dark"}/>
             </div>
           </div>
         </div>

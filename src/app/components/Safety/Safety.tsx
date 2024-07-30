@@ -4,12 +4,13 @@ import styles from './safety.module.scss'
 import AddresBar from '../AddresBar/AddresBar'
 import ButtonGreen from '../Buttons/ButtonGreen'
 import Image from 'next/image'
+import ButtonDark from '../Buttons/ButtonDark'
 export default function Safety() {
   return (
     <section className={styles.safety}>
       <div className={styles.safetyWrapper}>
         <div className={styles.safetyContent}>
-          <AddresBar />
+          <AddresBar theme={"dark"}/>
           <h2>
             <span>Безопасность, которой Вы можете</span>
             <span>Доверять!</span>
@@ -61,7 +62,7 @@ export default function Safety() {
               <span>Shh...</span>
             </div>
           </div>
-          <ButtonGreen title={'Стать невидимым в мире веба'} />
+          <ButtonDark title={'Стать невидимым в мире веба'} colorSvg={"#F5F5F5"} theme={"green"}/>
 
         </div>
       </div>

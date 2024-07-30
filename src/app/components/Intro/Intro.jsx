@@ -35,7 +35,7 @@ export default function Intro() {
             <span>Разблокировать доступ в свободный веб-мир!</span>
             <Image src="/svg/arrow-white.svg" width={50} height={50} alt="arrow"/>
           </a> */}
-          <ButtonDark title="Разблокировать доступ в свободный веб-мир!" />
+          <ButtonDark title="Разблокировать доступ в свободный веб-мир!" colorSvg={"#F5F5F5"} theme={"dark"}/>
         </div>
       </div>
     </>
