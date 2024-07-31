@@ -1,7 +1,8 @@
 .devices {
   width: 100%;
   background: #131313;
-
+  display: flex;
+  justify-content: center;
   .devicesWrapper {
     width: 100%;
     display: flex;

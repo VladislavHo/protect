@@ -3,18 +3,14 @@ import styles from "./intro_company.module.scss";
 import AddressBar from "../AddresBar/AddresBar";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import Image from "next/image";
-
+import TitleObserver from "./TitleObserver";
 export default function IntroCompany() {
   return (
     <section className={styles.introCompany}>
       <div className={styles.introCompanyWrapper}>
         <AddressBar theme={"blue"} />
 
-        <div className={styles.title}>
-          <h2>
-            protektVPN - <span>нас не заблокируют!</span>
-          </h2>
-        </div>
+        <TitleObserver />
         <div className={styles.introCompanyContent}>
           <div className={styles.info}>
             <h4>У нас есть ключ к безопасному интернету!</h4>
@@ -58,7 +54,12 @@ export default function IntroCompany() {
               </div>
 
               <div className={styles.browserWrapper}>
-                <Image src={"/svg/Browser_blue.svg"} width={38} height={38} alt="flow"/>
+                <Image
+                  src={"/svg/Browser_blue.svg"}
+                  width={38}
+                  height={38}
+                  alt="flow"
+                />
               </div>
             </div>
             <h4>Безопасный доступ в публичных сетях!</h4>

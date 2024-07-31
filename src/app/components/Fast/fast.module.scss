@@ -199,25 +199,34 @@
       border-radius: 10px;
       padding: 30px 20px;
 
-      .titleServers {
-        background: rgba(39, 174, 96, 0.3);
-        border-radius: 10px;
-        padding: 13px 0;
 
+      .titleServiseWrapper {
         display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 27px;
+        justify-content: center;
 
-        h2 {
-          font-family: var(--font-family);
-          font-weight: 700;
-          font-size: 48px;
-          line-height: 100%;
-          text-align: center;
-          color: #27ae60;
+        .titleServers {
+          width: 100%;
+          background: rgba(39, 174, 96, 0.3);
+          border-radius: 10px;
+          padding: 13px 0;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 27px;
+
+          h2 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 100%;
+            text-align: center;
+            color: #27ae60;
+          }
         }
       }
+
 
       .flags {
         display: flex;
@@ -256,18 +265,26 @@
       }
     }
 
-    .ticketName {
-      margin-top: 20px;
-      @include titleStyleDashed();
+    .ticketNameWrapper {
+      max-width: 785px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .ticketName {
+        margin-top: 20px;
+        @include titleStyleDashed();
 
-      h2 {
+        h2 {
 
-        @include titleTextStyle();
-        padding: 46px 0;
-        max-width: 700px;
+          @include titleTextStyle();
+          padding: 46px 0;
+          max-width: 700px;
 
+        }
       }
     }
+
 
     .connections {
       width: 100%;
@@ -308,25 +325,28 @@
           }
         }
       }
-      .wrapperButton{
+
+      .wrapperButton {
         width: 100%;
         position: relative;
         top: -25px;
-        button{
-          span{
+
+        button {
+          span {
             font-size: 34px;
           }
         }
-      } 
+      }
 
     }
-    .greenFlow{
+
+    .greenFlow {
       position: absolute;
       bottom: -12px;
       // left: 0;
 
       transform: translate(-48%, 0);
-      
+
     }
   }
 }

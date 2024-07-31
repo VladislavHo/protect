@@ -3,14 +3,21 @@ import React, { useState } from "react";
 import styles from "./qa.module.scss";
 import { qaList } from "../../variables/variables";
 import ButtonDefault from "../Buttons/ButtonDefault";
-import Image from "next/image";
-import { CrossSvg } from "../Svg/Svg";
+import { useInView } from "react-intersection-observer";
+import DropDownItem from "./DropDownItem";
 export default function QA() {
   const [openedIndex, setOpenedIndex] = useState(-1);
-
   const toggleDropdown = (index) => {
     setOpenedIndex(openedIndex === index ? -1 : index);
   };
+
+
+ const { ref, inView } = useInView({
+    threshold: 0.5,
+ })
+
+
+
   return (
     <div className={styles.qa}>
       <div className={styles.qaWrapper}>
@@ -19,34 +26,13 @@ export default function QA() {
         <div className={styles.questionsList}>
           {qaList.map((item, index) => (
 
-              <div
-                // key={(item.id + Math.random()).toString()}
-                className={styles.questionsWrapper}
-                style={{ height: openedIndex === index ? "190px" : "84px", transition: "height 0.3s ease-in-out" }}
-                onClick={() => toggleDropdown(index)}
-              >
-                <button className={styles.question}>
-                  <div className={styles.questionWrapper}>
-                    <div className={styles.iconLogo}>
-                      <Image
-                        src={`/svg/${item.logo.name}.${item.logo.format}`}
-                        width={40}
-                        height={40}
-                        alt={item.logo.name}
-                      />
-                    </div>
-                    <span>{item.question}</span>
-                  </div>
-                  <div
-                    className={`${styles.icon} ${
-                      openedIndex === index ? styles.active : ""
-                    }`}
-                  >
-                    <CrossSvg />
-                  </div>
-                </button>
-                <p>{item.answer}</p>
-              </div>
+            <DropDownItem
+              key={item.id}
+              item={item}
+              index={index}
+              openedIndex={openedIndex}
+              toggleDropdown={toggleDropdown}
+            />
 
           ))}
         </div>

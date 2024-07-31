@@ -3,7 +3,8 @@ import Image from "next/image";
 import AddresBar from "../AddresBar/AddresBar";
 import { flags } from "../../variables/variables";
 import ButtonDefault from "../Buttons/ButtonDefault";
-
+import ObserverTitleFast from "./ObserverTitleFast";
+import ObserverTitleVpn from "./ObserverTitleVpn";
 export default function Fast() {
   return (
     <section className={styles.fast}>
@@ -52,10 +53,7 @@ export default function Fast() {
         </div>
 
         <div className={styles.servers}>
-          <div className={styles.titleServers}>
-            <Image width={48} height={48} src="./svg/Browser.svg" alt="svg" />
-            <h2>Надёжные сервера</h2>
-          </div>
+          <ObserverTitleFast />
 
           <div className={styles.flags}>
             <div className={styles.dottedBG}></div>
@@ -73,9 +71,7 @@ export default function Fast() {
           </div>
         </div>
 
-        <div className={styles.ticketName}>
-          <h2>protektVPN - твой билет в мир безопасного интернета</h2>
-        </div>
+        <ObserverTitleVpn/>
 
         <div className={styles.connections}>
           <div className={styles.connectionsWrapper}>

@@ -1,12 +1,18 @@
+"use client";
 import React from "react";
 import styles from "./devices.module.scss";
 import Image from "next/image";
 import { cardDevice } from "../../variables/variables";
 import ButtonDefault from "../Buttons/ButtonDefault";
+import useScrollObserver from "../../hook/useScrollObserver";
 export default function Devices() {
+  const [widthComponets, setWidthComponets] = React.useState(0);
+  const ref = React.useRef(null);
+
+  useScrollObserver(ref, setWidthComponets);
   return (
     <div className={styles.devices}>
-      <div className={styles.devicesWrapper}>
+      <div className={styles.devicesWrapper} ref={ref} style={{ width: `calc(80% + ${widthComponets}px)` }}>
         <div className={styles.devicesTitleContent}>
           <h2 className={styles.h2}>
             <span>Независимо от устройства,</span>
