@@ -1,10 +1,26 @@
-// import React from "react"
+"use client";
+import { observer } from "mobx-react-lite";
 import styles from "./header.module.scss";
 import Image from "next/image";
-export default function Header() {
+import { usePathname } from "next/navigation";
+import state from "../../store/state";
+import { useEffect } from "react";
+
+const Header = observer(() => {
+  const { activeGreenColor } = state;
+
+  useEffect(() => {
+    // console.log(activeGreenColor, "header");
+  }, [activeGreenColor]);
+
+  const pathname = usePathname();
   return (
     <haeder className={styles.header}>
-      <nav className={styles.nav}>
+      <nav
+        className={[styles.nav, styles[pathname == "/" ? "" : "dark"], activeGreenColor ? styles.green : ""].join(
+          " "
+        )}
+      >
         <ul>
           <li className={styles.logo}>
             <a href="/">
@@ -27,4 +43,6 @@ export default function Header() {
       </nav>
     </haeder>
   );
-}
+});
+
+export default Header;

@@ -1,3 +1,5 @@
+"use client";
+import React, { useEffect, useRef } from "react";
 import styles from "./fast.module.scss";
 import Image from "next/image";
 import AddresBar from "../AddresBar/AddresBar";
@@ -5,9 +7,38 @@ import { flags } from "../../variables/variables";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import ObserverTitleFast from "./ObserverTitleFast";
 import ObserverTitleVpn from "./ObserverTitleVpn";
-export default function Fast() {
+import { observer } from "mobx-react-lite";
+import { useInView } from "react-intersection-observer";
+import changeHeaderPosition from "../../hook/changeHeaderPosition";
+import state from "../../store/state";
+const Fast = observer(() => {
+  const { changeOnDarkPosition } = state;
+  // changeHeaderPosition({ref, changeOnDarkPosition});
+
+
+  const {
+    ref,
+    inView,
+    entry,
+  } = useInView({
+    rootMargin: "0px",
+    threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+  });
+
+  useEffect(() => {
+    console.log(inView);
+    if (inView && entry?.boundingClientRect.top <= 200) {
+      state.changeOnDarkPosition(true);
+    } else {
+      state.changeOnDarkPosition(false);
+    }
+  }, [inView, entry]);
+
+  
+
+
   return (
-    <section className={styles.fast}>
+    <section className={styles.fast} ref={ref}>
       <div className={styles.fastLayout}>
         <AddresBar theme={"dark"} />
         <div className={styles.speed}>
@@ -71,7 +102,7 @@ export default function Fast() {
           </div>
         </div>
 
-        <ObserverTitleVpn/>
+        <ObserverTitleVpn />
 
         <div className={styles.connections}>
           <div className={styles.connectionsWrapper}>
@@ -125,4 +156,5 @@ export default function Fast() {
       </div>
     </section>
   );
-}
+});
+export default Fast;

@@ -1,21 +1,54 @@
 // import React from 'react'
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./safety.module.scss";
 import AddresBar from "../AddresBar/AddresBar";
 import Image from "next/image";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import useScrollObserver from "../../hook/useScrollObserver";
-export default function Safety() {
+import { observer } from "mobx-react-lite";
+import state from "../../store/state";
+
+import changeHeaderPosition from "../../hook/changeHeaderPosition";
+import { InView, useInView } from "react-intersection-observer";
+
+const Safety = observer(() => {
   const [widthComponets, setWidthComponets] = React.useState(0);
-  const ref = useRef(null);
-  useScrollObserver(ref, setWidthComponets);
+  const { changeOnDarkPosition } = state;
+  // const ref = useRef(null);
+
+  const {
+    ref: refSection,
+    inView,
+    entry,
+  } = useInView({
+    rootMargin: "0px",
+    threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+  });
+
+  useEffect(() => {
+    console.log(inView);
+    if (inView && entry?.boundingClientRect.top <= 200) {
+      state.changeOnDarkPosition(true);
+    } else {
+      state.changeOnDarkPosition(false);
+    }
+  }, [inView, entry]);
+
+  // const refSection = useRef(null);
+
+  // useScrollObserver(ref, setWidthComponets);
+  // changeHeaderPosition({ ref: refSection, changeOnDarkPosition });
   return (
-    <section className={styles.safety}>
+    <section className={styles.safety} ref={refSection}>
       <div className={styles.safetyWrapper}>
         <div className={styles.safetyContent}>
           <AddresBar theme={"dark"} />
-          <div className={styles.titleWrapper} ref={ref} style={{ width: `calc(80% + ${widthComponets}px)` }}>
+          <div
+            className={styles.titleWrapper}
+            // ref={ref}
+            style={{ width: `calc(80% + ${widthComponets}px)` }}
+          >
             <h2>
               <span>Безопасность, которой Вы можете</span>
               <span>Доверять!</span>
@@ -115,4 +148,6 @@ export default function Safety() {
       </div>
     </section>
   );
-}
+});
+
+export default Safety;

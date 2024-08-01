@@ -6,7 +6,9 @@ import Safety from './components/Safety/Safety';
 import AboutServices from './components/AboutServices/AboutServices';
 import QA from './components/QA/QA';
 
+
 export default function Home() {
+
   return (
     <>
       <Intro />

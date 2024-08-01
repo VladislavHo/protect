@@ -1,14 +1,30 @@
-
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
+
+
+
 }
+
+html::-webkit-scrollbar-thumb {
+  cursor: grab !important;
+  background-color: #445BE7;
+  border-radius: 10px;
+  border: 6px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+html::-webkit-scrollbar {
+  cursor: grab !important;
+  width: 20px;
+  background-color: transparent;
+}
+
 :root {
   --font-family: "Onest", sans-serif;
   --second-family: "Clash Display", sans-serif;
@@ -16,17 +32,22 @@ html{
   --font3: "Inter", sans-serif;
   --font4: "Figtree", sans-serif;
 }
-body { min-width: 960px;}
-a{
+
+body {
+  min-width: 960px;
+}
+
+a {
   text-decoration: none;
   color: inherit;
 
 }
-li{
+
+li {
   list-style: none;
 }
 
-main{
+main {
   /* width: 100%;
   max-width: 1200px;
   margin: 0 auto; */
