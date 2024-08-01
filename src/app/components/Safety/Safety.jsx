@@ -15,7 +15,7 @@ import { InView, useInView } from "react-intersection-observer";
 const Safety = observer(() => {
   const [widthComponets, setWidthComponets] = React.useState(0);
   const { changeOnDarkPosition } = state;
-  // const ref = useRef(null);
+  const ref = useRef(null);
 
   const {
     ref: refSection,
@@ -37,7 +37,7 @@ const Safety = observer(() => {
 
   // const refSection = useRef(null);
 
-  // useScrollObserver(ref, setWidthComponets);
+  useScrollObserver(ref, setWidthComponets);
   // changeHeaderPosition({ ref: refSection, changeOnDarkPosition });
   return (
     <section className={styles.safety} ref={refSection}>
@@ -46,7 +46,7 @@ const Safety = observer(() => {
           <AddresBar theme={"dark"} />
           <div
             className={styles.titleWrapper}
-            // ref={ref}
+            ref={ref}
             style={{ width: `calc(80% + ${widthComponets}px)` }}
           >
             <h2>

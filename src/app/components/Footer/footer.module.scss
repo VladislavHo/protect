@@ -1,0 +1,108 @@
+.footer {
+  width: 100%;
+  background-color: #f6f5f7;
+
+  .footerWrapper {
+    max-width: 1161px;
+    margin: 0 auto;
+    background-color: #131313;
+    border-radius: 10px 10px 0 0;
+    padding: 30px;
+
+    .footerNav {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+          &.title {
+
+            color: #eef0ff;
+            font-size: 20px;
+            font-family: 'Onest', Arial, sans-serif;
+            font-weight: 700;
+            line-height: 31px;
+          }
+
+          color: #c3cbff;
+          font-size: 18px;
+          font-family: 'Onest',
+          Arial,
+          sans-serif;
+          line-height: 28px;
+          font-weight: 400;
+
+          a {}
+        }
+      }
+    }
+
+    .footerInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .connection {
+        display: flex;
+        gap: 30px;
+
+        .logo {}
+
+        .contacts {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: #c3cbff;
+            font-size: 20px;
+            font-family: 'Onest', Arial, sans-serif;
+            line-height: 31px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .download {
+        ul {
+          display: flex;
+          gap: 10px;
+          li {
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            padding: 10px;
+            a{
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              .title{
+                display: flex;
+                flex-direction: column;
+                span{
+                  &:nth-child(1){
+                    color: #131313;
+                    font-size: 10px;
+                    font-family: 'Onest', Arial, sans-serif;
+                    line-height: 10px;
+                    font-weight: 500;
+                  }
+                  &:nth-child(2){
+                    color: #131313;
+                    font-size: 14px;
+                    font-family: 'Onest', Arial, sans-serif;
+                    line-height: 14px;
+                    font-weight: 700;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
