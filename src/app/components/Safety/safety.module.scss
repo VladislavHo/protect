@@ -9,7 +9,7 @@
     background: #131313;
     border-radius: 10px;
     padding: 20px 0;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 760px) {
       padding: 20px 10px;
     }
     .safetyContent {
@@ -75,7 +75,7 @@
           padding: 30px;
           position: relative;
           z-index: 1;
-          @media screen and (max-width: 480px) {
+          @media screen and (max-width: 920px) {
             width: 100%;
             margin-bottom: 187px;
             &:nth-last-child(1) {
@@ -90,7 +90,7 @@
             width: 300px;
             right: -50%;
             top: 38%;
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 920px) {
               height: 200px;
               width: 100%;
               right: 0;
@@ -99,7 +99,7 @@
               position: absolute;
               left: 0;
               top: 26px;
-              @media screen and (max-width: 480px) {
+              @media screen and (max-width: 920px) {
                 // width: 100px;
                 rotate: 90deg;
                 top: calc(100% - -4px);
@@ -112,7 +112,7 @@
               position: absolute;
               right: 28px;
               bottom: -205px;
-              @media screen and (max-width: 480px) {
+              @media screen and (max-width: 920px) {
                 right: calc(50% - 6px);
                 z-index: 0;
                 bottom: calc(-100% - -43px);
@@ -131,7 +131,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              @media screen and (max-width: 480px) {
+              @media screen and (max-width: 920px) {
                 right: calc(50% - 33px);
                 bottom: -58%;
                 background: rgba(39, 174, 96);
@@ -147,7 +147,7 @@
             top: 0;
             left: -68%;
             z-index: 0;
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 920px) {
               width: 100%;
               left: 0;
               display: none
@@ -157,7 +157,7 @@
               position: absolute;
               right: 0;
               top: calc(50% - 8px);
-              @media screen and (max-width: 480px) {
+              @media screen and (max-width: 920px) {
                 rotate: -90deg;
                 right: 0;
                 top: calc(100% - -50px);
@@ -180,7 +180,7 @@
               left: 45px;
               bottom: 0;
               z-index: 0;
-              @media screen and (max-width: 480px) {
+              @media screen and (max-width: 920px) {
                   display: none;
               }
             }

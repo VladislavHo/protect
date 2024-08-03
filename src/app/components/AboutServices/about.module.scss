@@ -7,7 +7,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    
+
     .aboutServicesWrapperObserver{
       // width: 100%;
       margin-top: 41px;
@@ -31,6 +31,9 @@
             font-size: 64px;
             text-align: center;
             color: #445be7;
+            @media screen and (max-width: 768px) {
+              font-size: 32px;
+            }
             @media screen and (max-width: 480px) {
               font-size: 24px;
             }
@@ -40,6 +43,9 @@
               background: #c3cbff;
               border-radius: 10px;
               padding: 10px;
+              @media screen and (max-width: 768px) {
+                font-size: 24px;
+              }
               @media screen and (max-width: 480px) {
                 font-size: 18px;
                 
@@ -78,9 +84,13 @@
         }
         .buttonWrapper{
           width: 100%;
+          padding: 0 10px;
           button{
             span{
               font-size: 32px;
+              @media screen and (max-width: 768px) {
+                font-size: 24px;
+              }
               @media screen and (max-width: 480px) {
                 font-size: 18px;
                 
@@ -152,6 +162,9 @@
               button{
                 span{
                   font-size: 32px;
+                  @media screen and (max-width: 768px) {
+                    font-size: 24px;
+                  }
                   @media screen and (max-width: 480px) {
                     font-size: 18px;
                     
