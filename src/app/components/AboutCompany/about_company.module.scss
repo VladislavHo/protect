@@ -11,7 +11,9 @@
     border-radius: 10px;
     margin-top: 41px;
     padding: 45px 0 20px;
-
+    @media screen and (max-width: 768px) {
+      padding: 20px 0 20px;
+    }
     .aboutCompanyWrapperObserver {
       max-width: 966px;
       margin: 0 auto;
@@ -22,6 +24,10 @@
         font-weight: 700;
         text-align: center;
         padding-bottom: 50px;
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          padding-bottom: 20px;
+        }
       }
 
       .screenPhone {
@@ -53,9 +59,17 @@
               line-height: 24px;
               text-align: center;
               margin-bottom: 40px;
+              @media screen and (max-width: 768px) {
+                font-size: 14px;
+              }
             }
   
-            img {}
+            img {
+              @media screen and (max-width: 768px) {
+                width: 230px;
+                height: 240px;
+              }
+            }
           }
         }
 

@@ -8,7 +8,7 @@ export default function InfoCompany() {
       <div className={styles.infoCompanyWrapper}>
         <div className={styles.header}>
           <div className={styles.headerContenet}>
-            <span>
+            <span className={styles.flag}>
               <Image
                 width={39}
                 height={35}
