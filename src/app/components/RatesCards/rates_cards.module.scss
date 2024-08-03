@@ -5,7 +5,9 @@
     max-width: 1161px;
     margin: 0 auto;
     padding-bottom: 30px;
-
+    @media screen and (max-width: 768px) {
+      padding: 0 5px;
+    }
     h2 {
       max-width: 510px;
       margin: 0 auto;
@@ -15,6 +17,10 @@
       font-weight: 500;
       text-align: center;
       margin-bottom: 30px;
+      @media screen and (max-width: 480px) {
+        max-width: 300px;
+        font-size: 16px;
+      }
       span{
         background: rgba(203, 203, 203, 0.389);
         border-radius: 5px;
@@ -30,10 +36,22 @@
       grid-template-areas: "a a b b" "a a b b" "c c c c" "c c c c";
       grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
       .card {
         border-radius: 10px;
         padding: 30px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          .header{
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
 
         &.white {
           background-color: #f2f2f2;
@@ -67,6 +85,9 @@
               line-height: 1;
               font-weight: 700;
               line-height: 36px;
+              @media screen and (max-width: 768px) {
+                font-size: 24px;
+              }
             }
 
             &.white {
@@ -95,6 +116,8 @@
               }
 
               .supList {
+                display: flex;
+                flex-wrap: wrap;
                 p {
                   color: #c3cbff;
                   font-size: 18px;
@@ -139,6 +162,9 @@
                 line-height: 1;
                 font-weight: 700;
                 border-radius: 10px;
+                @media screen and (max-width: 768px) {
+                    font-size: 14px !important;
+                }
 
               }
             }
@@ -153,7 +179,9 @@
             border-radius: 10px;
             padding: 7px 10px;
             align-self: self-start;
-
+            @media screen and (max-width: 768px) {
+              font-size: 14px;
+            }
             &.white {
 
               color: #6b6b6b;
@@ -166,6 +194,7 @@
             }
 
             &.blue {
+              width: 121px;
               background-color: #5d72f3;
               color: #c3cbff;
             }
@@ -178,7 +207,9 @@
           font-family: 'Onest', Arial, sans-serif;
           font-weight: 500;
           margin-top: 20px;
-
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
           &.white {
             color: #979797;
           }
@@ -203,7 +234,9 @@
 
           border-radius: 10px;
           padding: 5px;
-
+          @media screen and (max-width: 768px) {
+            height: 40px;
+          }
           &.white {
             background-color: #e7e7e7;
 
@@ -219,6 +252,12 @@
               font-weight: 500;
               border-radius: 10px;
               background-color: #131313;
+              @media screen and (max-width: 768px) {
+                width: 40%;
+                justify-content: center;
+                font-size: 14px;
+                padding: 0 5px;
+              }
 
             }
 
@@ -227,6 +266,9 @@
               font-size: 36px;
               font-family: 'Onest', Arial, sans-serif;
               font-weight: 700;
+              @media screen and (max-width: 768px) {
+                font-size: 20px;
+              }
             }
           }
 
@@ -246,6 +288,12 @@
               border-radius: 10px;
 
               background-color: #c3cbff;
+              @media screen and (max-width: 768px) {
+                width: 40%;
+                justify-content: center;
+                font-size: 14px;
+                padding: 0 5px;
+              }
             }
 
             .price {
@@ -253,6 +301,9 @@
               font-size: 36px;
               font-family: 'Onest', Arial, sans-serif;
               font-weight: 700;
+              @media screen and (max-width: 768px) {
+                font-size: 20px;
+              }
             }
           }
 
@@ -272,6 +323,12 @@
               font-weight: 500;
               border-radius: 10px;
               background-color: #27402c;
+              @media screen and (max-width: 768px) {
+                width: 40%;
+                justify-content: center;
+                font-size: 14px;
+                padding: 0 5px;
+              }
 
             }
 
@@ -280,6 +337,9 @@
               font-size: 36px;
               font-family: 'Onest', Arial, sans-serif;
               font-weight: 700;
+              @media screen and (max-width: 768px) {
+                font-size: 20px;
+              }
             }
           }
 
@@ -289,7 +349,11 @@
         .include {
           .includeList {
             color: red;
-
+              @media screen and (max-width: 768px) {
+                li{
+                  font-size: 16px!important;
+                }
+              }
             &.white {
               li {
                 font-size: 20px;
@@ -332,6 +396,9 @@
           button {
             span {
               font-size: 24px;
+              @media screen and (max-width: 768px) {
+                font-size: 16px;
+              }
             }
           }
         }

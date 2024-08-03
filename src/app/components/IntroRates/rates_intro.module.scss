@@ -26,6 +26,9 @@
         font-family: 'Onest', Arial, sans-serif;
         line-height: 1.1;
         font-weight: 500;
+        @media screen and (max-width: 480px) {
+          display: none;
+        }
       }
 
       h2 {
@@ -39,6 +42,9 @@
           line-height: 1.15;
           font-weight: 700;
           color: rgb(19, 19, 19);
+          @media screen and (max-width: 480px) {
+            font-size: 24px;
+          }
 
           &:nth-of-type(2) {
             padding: 5px 10px;
