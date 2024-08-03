@@ -1,6 +1,8 @@
+
+
 import Intro from './components/Intro/Intro'
 import Fast from './components/Fast/Fast'
-import styles from "./page.module.css";
+
 import Devices from './components/Devices/Devices';
 import Safety from './components/Safety/Safety';
 import AboutServices from './components/AboutServices/AboutServices';

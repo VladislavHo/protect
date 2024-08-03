@@ -3,74 +3,97 @@
   position: fixed;
   top: 20px;
   z-index: 999;
+  
   .nav {
     max-width: 771px;
     margin: 0 auto;
     padding: 3px;
-
+    position: relative;
+    z-index: 1000;
 
     border-radius: 10px;
     // opacity: 0.1;
     background-color: #c3cbff58;
 
     transition: all .2s ease-in-out;
-    &.dark{
+
+    @media screen and (max-width: 1280px) {
+      padding: 20px;
+    }
+
+    &.dark {
+      display: none;
       background-color: rgba(41, 41, 41, 0.6);
       box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+
       // opacity: 0.6;
-      ul{
-        li{
-          a{
-            &:hover{
+      .itemsListHeader {
+        li {
+          a {
+            &:hover {
               color: #b5b5b5;
               background-color: #515151;
             }
           }
         }
-        .logo{
-          a{
+
+        .logo {
+          a {
             border-radius: 10px;
           }
         }
       }
     }
-    &.green{
+
+    &.green {
       background-color: rgba(41, 54, 47, 0.7);
-      ul{
-        li{
-          a{
+
+      .itemsListHeader {
+        li {
+          a {
             color: #27ae60;
-            &:hover{
+
+            &:hover {
               background-color: #1e623a;
               color: #abffcf;
             }
           }
         }
-        .authLink{
+
+        .authLink {
           background-color: #1e623a;
           border-radius: 10px;
-          a{
+
+          a {
             color: #27ae60;
           }
         }
-        .logo{
-          a{
+
+        .logo {
+          a {
             border-radius: 10px;
           }
         }
       }
     }
-    ul {
+
+    .itemsListHeader {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      li {
+      z-index: 200;
+      position: relative;
+      .itemListHeader {
         // justify-self: start;
         // width: 100%;
         // height: 100%;
         height: 100%;
+
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+
         a {
 
           font-family: var(--font-family);
@@ -79,15 +102,68 @@
           color: #e6e6e6;
           border-radius: 10px;
           padding: 12px 43px;
-          &:hover{
+
+          &:hover {
             background: #c3cbff;
             background-color: #5d72f3;
             transition: all .3s ease-in-out;
           }
         }
       }
-      .logo{
-        a{
+
+      .burger {
+        display: none;
+
+        @media screen and (max-width: 1280px) {
+          display: block;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          position: relative;
+
+          span {
+            &:nth-child(1) {
+              position: absolute;
+              width: 100%;
+              height: 4px;
+              background-color: #b5b5b5;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 10px;
+            }
+
+            &:nth-child(2) {
+              position: absolute;
+              width: 100%;
+              height: 4px;
+              background-color: #b5b5b5;
+              top: 10px;
+              border-radius: 10px;
+
+            }
+
+            &:nth-child(3) {
+              position: absolute;
+              width: 100%;
+              height: 4px;
+              background-color: #b5b5b5;
+              bottom: 10px;
+              border-radius: 10px;
+            }
+
+          }
+        }
+      }
+
+      .logo {
+        @media screen and (max-width: 1280px) {
+          display: block;
+
+
+        }
+
+        a {
           width: 45px;
           height: 45px;
           display: block;
@@ -96,16 +172,23 @@
           padding: 0;
 
           border-radius: 50%;
-          &:hover{
+
+          &:hover {
             background-color: #131313;
           }
-          img{
+
+          img {
             width: 100%;
             height: 100%;
           }
         }
       }
+
       .authLink {
+
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
         a {
           background: #131313;
           display: flex;
@@ -114,11 +197,13 @@
           gap: 10px;
           padding: 10px 57px;
           transition: all .3s ease-in-out;
-          &:hover{
+          border-radius: 10px;
+          &:hover {
             background: #c3cbff;
             background-color: #5d72f3;
             transition: all .3s ease-in-out;
           }
+
           span {
             font-family: var(--font-family);
             font-weight: 500;
@@ -128,7 +213,7 @@
             border-radius: 10px;
           }
         }
-        
+
       }
     }
   }

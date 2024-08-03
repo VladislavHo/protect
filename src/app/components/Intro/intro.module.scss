@@ -2,16 +2,74 @@
   max-width: 1200px;
   width: 100%;
   // height: 100vh;
-  aspect-ratio: 2 / 1;
+  // aspect-ratio: 2 / 1;
+  height: 90vh;
   margin: 0 auto;
   background-color: #445BE7;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
+  @media screen and (max-width: 1280px) {
+    height: 100vh;
+    padding: 0 20px;
+  }
+
   .title {
     position: relative;
+    @media screen and (max-width: 1280px) {
+      margin-top: 100px;
+    }
+    .flowIntroLeft {
+      display: flex;
+      position: absolute;
+      // background-color: #445BE7;
+      // z-index: -1;
+      left: 43px;
+      top: 30px;
 
+      @media screen and (max-width: 1280px) {
+        // position: static;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 20px;
+        left: 0;
+        // transform: translate(50%, 0);
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        .span {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 16px;
+          color: #445be7;
+
+          padding: 5px 15px;
+
+          background: #c3caff;
+          border-radius: 10px;
+        }
+
+      }
+    }
+    .flowIntroRight {
+
+      position: absolute;
+      right: 128px;
+      top: 100px;
+      zoom: 1;
+
+      @media screen and (max-width: 1280px) {
+        display: none;
+      }
+
+    }
     .h1 {
       display: flex;
       flex-direction: column;
@@ -23,6 +81,18 @@
       line-height: 100%;
       text-align: center;
       color: #eef0ff;
+      @media screen and (max-width: 1280px) {
+        font-size: 52px;
+        
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 42px;
+        
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 32px;
+        
+      }
 
       .span {
         &:nth-child(2) {
@@ -50,58 +120,39 @@
       line-height: 100%;
       text-align: center;
       color: #c3cbff;
-    }
 
-    .flowIntroLeft {
-      display: flex;
-      position: absolute;
-      // background-color: #445BE7;
-      // z-index: -1;
-      left: 43px;
-      top: 30px;
+      @media screen and (max-width: 1280px) {
+        // max-width: 500px;
+        text-align: center;
 
-      .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-
-        .span {
-          font-family: var(--font-family);
-          font-weight: 500;
-          font-size: 16px;
-          color: #445be7;
-
-          padding: 5px 15px;
-
-          background: #c3caff;
-          border-radius: 10px;
-        }
-
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
       }
     }
 
-    .flowIntroRight {
-
-      position: absolute;
-      right: 128px;
-      top: 100px;
-      zoom: 1;
 
 
-    }
+
   }
 
 
   .linkWrapper {
     width: 100%;
+
     // text-align: center;
-    button{
-      span{
+    button {
+      @media screen and (max-width: 768px) {
+        gap: 5px;
+      }
+      span {
         font-size: 34px;
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+      }
       }
     }
-  
+
   }
 
 }

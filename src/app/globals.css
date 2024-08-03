@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid green; */
 }
 
 html {
@@ -34,7 +35,8 @@ html::-webkit-scrollbar {
 }
 
 body {
-  min-width: 960px;
+
+
 }
 
 a {

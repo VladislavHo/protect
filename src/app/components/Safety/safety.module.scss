@@ -9,7 +9,9 @@
     background: #131313;
     border-radius: 10px;
     padding: 20px 0;
-
+    @media screen and (max-width: 480px) {
+      padding: 20px 10px;
+    }
     .safetyContent {
       max-width: 1161px;
       margin: 0 auto;
@@ -20,32 +22,44 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        h2 {
-          @include titleStyleDashed();
-          display: flex;
-          flex-direction: column;
-          padding: 30px;
-          margin: 30px 0 36px;
-
-          span {
-            font-family: var(--font-family);
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 112%;
-            text-align: center;
-            color: #27ae60;
-
-            &:nth-child(2) {
-              color: #abffcf;
-              background: rgba(39, 174, 96, 0.3);
-              border-radius: 10px;
-              padding: 5px 10px;
+        .title{
+          h2 {
+            @include titleStyleDashed();
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            margin: 30px 0 36px;
+  
+            @media screen and (max-width: 480px) {
+              // width: 100%;
+              padding: 20px;
             }
+  
+            span {
+              font-family: var(--font-family);
+              font-weight: 700;
+              font-size: 40px;
+              line-height: 112%;
+              text-align: center;
+              color: #27ae60;
+  
+              @media screen and (max-width: 480px) {
+                font-size: 18px;
+              }
+  
+              &:nth-child(2) {
+                color: #abffcf;
+                background: rgba(39, 174, 96, 0.3);
+                border-radius: 10px;
+                padding: 5px 10px;
+              }
+            }
+  
+  
+  
           }
-
-
-
         }
+
       }
 
 
@@ -60,7 +74,14 @@
           border-radius: 20px;
           padding: 30px;
           position: relative;
-
+          z-index: 1;
+          @media screen and (max-width: 480px) {
+            width: 100%;
+            margin-bottom: 187px;
+            &:nth-last-child(1) {
+              margin-bottom: 0;
+            }
+          }
           .bg {
             position: absolute;
             right: 0;
@@ -69,17 +90,33 @@
             width: 300px;
             right: -50%;
             top: 38%;
-
+            @media screen and (max-width: 480px) {
+              height: 200px;
+              width: 100%;
+              right: 0;
+            }
             .flowLiener {
               position: absolute;
               left: 0;
               top: 26px;
+              @media screen and (max-width: 480px) {
+                // width: 100px;
+                rotate: 90deg;
+                top: calc(100% - -4px);
+
+                left: calc(50% - 116px);
+              }
             }
 
             .flowLienerDashed {
               position: absolute;
               right: 28px;
               bottom: -205px;
+              @media screen and (max-width: 480px) {
+                right: calc(50% - 6px);
+                z-index: 0;
+                bottom: calc(-100% - -43px);
+              }
             }
 
             .logo {
@@ -94,6 +131,12 @@
               display: flex;
               justify-content: center;
               align-items: center;
+              @media screen and (max-width: 480px) {
+                right: calc(50% - 33px);
+                bottom: -58%;
+                background: rgba(39, 174, 96);
+                z-index: 1;
+              }
             }
           }
 
@@ -103,12 +146,23 @@
             width: 400px;
             top: 0;
             left: -68%;
-
+            z-index: 0;
+            @media screen and (max-width: 480px) {
+              width: 100%;
+              left: 0;
+              display: none
+            }
             // transform: translate(0, 50%);
             .flowLienerBig {
               position: absolute;
               right: 0;
               top: calc(50% - 8px);
+              @media screen and (max-width: 480px) {
+                rotate: -90deg;
+                right: 0;
+                top: calc(100% - -50px);
+                z-index: 0;
+              }
               // top: 26px;
               // transform: translate(0%, -50%);
             }
@@ -116,7 +170,7 @@
             .logoUnlockWrapper {
               position: absolute;
               transform: translate(0%, 50%);
-              z-index: 1;
+              z-index: 1; 
 
               .unlockLogo {}
             }
@@ -126,6 +180,9 @@
               left: 45px;
               bottom: 0;
               z-index: 0;
+              @media screen and (max-width: 480px) {
+                  display: none;
+              }
             }
           }
 
@@ -136,6 +193,10 @@
             line-height: 112%;
             color: #abffcf;
             padding-bottom: 20px;
+            @media screen and (max-width: 480px) {
+              max-width: 200px;
+              font-size: 20px;
+            }
           }
 
           p {
@@ -144,6 +205,10 @@
             font-size: 20px;
             line-height: 112%;
             color: #abffcf;
+            @media screen and (max-width: 480px) {
+              max-width: 350px;
+              font-size: 14px;
+            }
           }
 
           &:nth-child(2) {
@@ -175,6 +240,10 @@
       // padding-bottom: 30px;
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 480px) {
+        padding: 20px;
+        // border: 10px dashed #2a2a2a;
+      }
 
       .info {
         width: 56%;
@@ -186,6 +255,9 @@
           line-height: 112%;
           color: #8e8e8e;
           padding-bottom: 30px;
+          @media screen and (max-width: 480px) {
+            font-size: 20px;
+          }
         }
 
         p {
@@ -194,6 +266,9 @@
           font-size: 20px;
           line-height: 112%;
           color: #6f6f6f;
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
+          }
         }
       }
 
@@ -219,6 +294,9 @@
       button {
         span {
           font-size: 36px;
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
+          }
         }
       }
 

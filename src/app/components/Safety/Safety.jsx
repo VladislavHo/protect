@@ -44,15 +44,17 @@ const Safety = observer(() => {
       <div className={styles.safetyWrapper}>
         <div className={styles.safetyContent}>
           <AddresBar theme={"dark"} />
-          <div
-            className={styles.titleWrapper}
-            ref={ref}
-            style={{ width: `calc(80% + ${widthComponets}px)` }}
-          >
-            <h2>
-              <span>Безопасность, которой Вы можете</span>
-              <span>Доверять!</span>
-            </h2>
+          <div className={styles.titleWrapper}>
+            <div
+              className={styles.title}
+              ref={ref}
+              style={{ width: `calc(80% + ${widthComponets}px)` }}
+            >
+              <h2>
+                <span>Безопасность, которой Вы можете</span>
+                <span>Доверять!</span>
+              </h2>
+            </div>
           </div>
 
           <div className={styles.personalInfo}>

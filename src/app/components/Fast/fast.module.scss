@@ -14,13 +14,28 @@
     padding: 23px 20px 120px;
 
     position: relative;
-
+    @media screen and (max-width: 480px) {
+      padding: 23px 20px 10px;
+    }
     .speed {
       display: flex;
       justify-content: space-between;
 
       .titleWrapperFast {
-        margin-top: 30px;
+        margin-top: 90px;
+
+        @media screen and (max-width: 1280px) {
+          margin-top: 60px;
+
+          span {
+            position: absolute !important;
+            top: 100px !important;
+            // left: 100px;
+            left: 10px;
+            font-size: 24px !important;
+
+          }
+        }
 
         .span {
           display: block;
@@ -42,7 +57,19 @@
       }
 
       .titleWrapperPowerful {
-        margin-top: 30px;
+        margin-top: 90px;
+
+        @media screen and (max-width: 1280px) {
+          margin-top: 60px;
+
+          span {
+            position: absolute !important;
+            top: 100px !important;
+            right: 10px;
+            font-size: 24px !important;
+
+          }
+        }
 
         .span {
           display: block;
@@ -74,9 +101,19 @@
         align-items: center;
         justify-content: center;
 
+        @media screen and (max-width: 760px) {
+          width: 350px;
+          height: 350px;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 250px;
+          height: 250px;
+        }
+
         .circle {
-          width: 400px;
-          height: 400px;
+          width: 100%;
+          height: 100%;
           // background: url("./img/circle.png");
           background-position: center;
           background-repeat: no-repeat;
@@ -99,15 +136,34 @@
             align-items: center;
             justify-content: center;
 
+            @media screen and (max-width: 760px) {
+              width: 300px;
+              height: 300px;
+            }
+
+            @media screen and (max-width: 480px) {
+              width: 200px;
+              height: 200px;
+            }
+
             .center {
               position: relative;
               top: 38px;
-
+              @media screen and (max-width: 480px) {
+                top: 10px;
+              }
               img {
                 position: absolute;
                 top: calc(50% - 58px);
                 left: calc(50% + 35px);
                 transform: translate(-50%, -50%);
+
+                @media screen and (max-width: 480px) {
+                  width: 50px;
+                  height: 50px;
+                  top: calc(50% - 27px);
+                  left: calc(50% + 20px);
+                }
               }
 
               .speedName {
@@ -120,6 +176,10 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+
+                @media screen and (max-width: 480px) {
+                  font-size: 12px;
+                }
               }
             }
 
@@ -137,10 +197,20 @@
                 border: 50px;
                 border-radius: 50px;
 
+                @media screen and (max-width: 480px) {
+                  font-size: 12px;
+                  padding: 2px 10px;
+                }
+
                 &:nth-child(1) {
                   bottom: 60px;
                   left: 36px;
                   background: #27ae60;
+
+                  @media screen and (max-width: 480px) {
+                    bottom: 48px;
+                    left: 20px;
+                  }
                 }
 
                 &:nth-child(2) {
@@ -153,12 +223,22 @@
                   top: 60px;
                   left: 36px;
                   background: linear-gradient(200deg, #6f83fa 0%, #27ae60 100%);
+
+                  @media screen and (max-width: 480px) {
+                    top: 38px;
+                    left: 20px;
+
+                  }
                 }
 
                 &:nth-child(4) {
                   top: 8px;
                   left: calc(50% - 33px);
                   background: #7182ff;
+
+                  @media screen and (max-width: 480px) {
+                    left: calc(50% - 20px);
+                  }
                 }
 
                 &:nth-child(5) {
@@ -167,6 +247,11 @@
 
                   box-shadow: 0 4px 10px 0 rgba(113, 140, 255, 0.38);
                   background: linear-gradient(137deg, #7182ff 0%, #71ccff 100%);
+
+                  @media screen and (max-width: 480px) {
+                    top: 38px;
+                    right: 20px;
+                  }
                 }
 
                 &:nth-child(6) {
@@ -198,7 +283,10 @@
       border: 2px dashed #343434;
       border-radius: 10px;
       padding: 30px 20px;
-
+      @media screen and (max-width: 480px) {
+        padding: 10px 20px 0;
+        margin-top: 30px;
+      }
 
       .titleServiseWrapper {
         display: flex;
@@ -215,7 +303,16 @@
           justify-content: center;
           align-items: center;
           gap: 27px;
-
+          
+          @media screen and (max-width: 480px) {
+            gap: 15px;
+            padding: 4px 0;
+            img{
+              width: 43px;
+              height: 43px;
+            }
+    
+          }
           h2 {
             font-family: var(--font-family);
             font-weight: 700;
@@ -223,6 +320,14 @@
             line-height: 100%;
             text-align: center;
             color: #27ae60;
+
+            @media screen and (max-width: 768px) {
+              font-size: 32px;
+            }
+            @media screen and (max-width: 480px) {
+              font-size: 24px;
+              
+            }
           }
         }
       }
@@ -238,6 +343,12 @@
         row-gap: 30px;
         margin-top: 30px;
 
+        @media screen and (max-width: 768px) {
+
+          max-width: 450px;
+          margin: 30px auto;
+        }
+
         .dottedBG {
           position: absolute;
           top: 50%;
@@ -248,6 +359,11 @@
           border: 2px dashed #27ae60;
           border-radius: 10px;
           z-index: 1;
+          @media screen and (max-width: 480px) {
+            height: calc(100% - 60px);
+            width: calc(100% - 60px);
+        
+          }
         }
 
         .flag {
@@ -261,6 +377,27 @@
           justify-content: center;
           z-index: 2;
 
+          @media screen and (max-width: 768px) {
+            width: 90px;
+            height: 90px;
+
+            img {
+              width: 50px;
+              height: 50px;
+            }
+
+          }
+
+          @media screen and (max-width: 480px) {
+            width: 63px;
+            height: 63px;
+
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+
         }
       }
     }
@@ -271,6 +408,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       .ticketName {
         margin-top: 20px;
         @include titleStyleDashed();
@@ -280,6 +418,9 @@
           @include titleTextStyle();
           padding: 46px 0;
           max-width: 700px;
+          @media screen and (max-width: 480px) {
+            padding: 10px 0;
+          }
 
         }
       }
@@ -296,7 +437,16 @@
         z-index: 1;
         position: relative;
         top: -8px;
-
+        @media screen and (max-width: 480px) {
+          top: -3px;
+          img{
+            width: 200px;
+            height: 30px;
+            &:last-child{
+              height: 45px;
+            }
+          }
+        }
         .icon {
           display: flex;
           justify-content: space-between;
@@ -312,14 +462,30 @@
             width: 75px;
             height: 75px;
             position: relative;
-
+            @media screen and (max-width: 480px) {
+              width: 40px;
+              height: 40px;
+              border: 2px solid #abffcf;
+              img{
+                width: 20px;
+                height: 20px;
+              }
+            }
 
             &:nth-child(1) {
               left: -34px;
+              @media screen and (max-width: 480px) {
+                left: -18px;
+                
+              }
             }
 
             &:nth-child(2) {
               right: -26px;
+              @media screen and (max-width: 480px) {
+                right: -18px;
+
+              }
             }
 
           }
@@ -330,10 +496,16 @@
         width: 100%;
         position: relative;
         top: -25px;
+        @media screen and (max-width: 480px) {
+          top: -14px;
 
+        }
         button {
           span {
             font-size: 34px;
+            @media screen and (max-width: 480px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -346,6 +518,9 @@
       // left: 0;
 
       transform: translate(-48%, 0);
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
 
     }
   }

@@ -9,52 +9,52 @@ export default function Footer() {
           <div className={styles.footerNav}>
             <ul>
               <li className={styles.title}>Скачать для:</li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">iOS</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Android</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">MacOs</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Windows</a>
               </li>
             </ul>
             <ul>
               <li className={styles.title}>Навигация</li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">О продукте</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Тарифы</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">О компании</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Личный Кабинет</a>
               </li>
             </ul>
             <ul>
               <li className={styles.title}>Контакты:</li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Telegram канал</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Telegram-поддержка</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Написать письмо</a>
               </li>
             </ul>
             <ul>
               <li className={styles.title}>Юридическая информация:</li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Политика конфиденциальности</a>
               </li>
-              <li>
+              <li className={styles.list}>
                 <a href="#">Условия пользования</a>
               </li>
               <li>PROTEKTSERVICES LTD</li>
