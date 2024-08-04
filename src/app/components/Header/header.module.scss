@@ -3,7 +3,13 @@
   position: fixed;
   top: 20px;
   z-index: 999;
-  
+  transition: all .3s ease-in-out;
+  &.up{
+    top: 20px;
+  }
+  &.down{
+    top: -50px;
+  }
   .nav {
     max-width: 771px;
     margin: 0 auto;

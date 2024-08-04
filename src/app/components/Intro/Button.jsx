@@ -7,7 +7,6 @@ export default function Button() {
   const [widthWindow, setWidthWindow] = useState(0)
   useEffect(()=>{
     setWidthWindow(window.innerWidth)
-    console.log(widthWindow)
   }, [widthWindow])
 
   return (

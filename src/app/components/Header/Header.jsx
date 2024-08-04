@@ -4,23 +4,30 @@ import styles from "./header.module.scss";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import state from "../../store/state";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-
+import useScrollPosition from "../../hook/useScrollPosition";
 const Header = observer(() => {
   const { activeGreenColor } = state;
   const [activeBurger, setActivBurger] = useState(false);
-
+  const [isScrollUp, setIsScrollUp] = useState(true);
   const pathname = usePathname();
+  const ref = useRef(null);
+  // useScrollPosition(setIsScrollUp)
+  const isScroll = useScrollPosition();
+
   return (
-    <haeder className={styles.header}>
+    <haeder
+      className={[styles.header, isScroll ? styles.up : styles.down].join(" ")}
+      ref={ref}
+    >
       <nav
         className={[
           styles.nav,
           styles[pathname == "/" ? "" : "dark"],
           activeGreenColor ? styles.green : "",
         ].join(" ")}
-        style={ activeBurger ? {backgroundColor: "#eef0ff"} : {}}
+        style={activeBurger ? { backgroundColor: "#eef0ff" } : {}}
       >
         <ul className={styles.itemsListHeader}>
           <li className={styles.logo}>
@@ -50,9 +57,7 @@ const Header = observer(() => {
           </li>
         </ul>
 
-     
-          <BurgerMenu activeBurger={activeBurger}/>
-     
+        <BurgerMenu activeBurger={activeBurger} />
       </nav>
     </haeder>
   );

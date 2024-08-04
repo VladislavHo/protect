@@ -27,7 +27,6 @@ const Safety = observer(() => {
   });
 
   useEffect(() => {
-    console.log(inView);
     if (inView && entry?.boundingClientRect.top <= 200) {
       state.changeOnDarkPosition(true);
     } else {
