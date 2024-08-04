@@ -11,7 +11,7 @@ export default function useScrollPosition() {
       const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
         const isScrollingUp = prevScrollPos > currentScrollPos;
-
+        if(prevScrollPos === 0) setPrevScrollPos(true);
         setScrollDirection(isScrollingUp ? true : false);
         setPrevScrollPos(currentScrollPos);
       };

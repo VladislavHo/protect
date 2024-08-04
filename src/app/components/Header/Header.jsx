@@ -48,7 +48,9 @@ const Header = observer(() => {
             </a>
           </li>
           <li
-            className={styles.burger}
+            className={[styles.burger, activeBurger ? styles.active : ""].join(
+              " "
+            )}
             onClick={() => setActivBurger(!activeBurger)}
           >
             <span></span>

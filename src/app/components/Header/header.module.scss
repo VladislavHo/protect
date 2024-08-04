@@ -4,12 +4,15 @@
   top: 20px;
   z-index: 999;
   transition: all .3s ease-in-out;
-  &.up{
+
+  &.up {
     top: 20px;
   }
-  &.down{
+
+  &.down {
     top: -50px;
   }
+
   .nav {
     max-width: 771px;
     margin: 0 auto;
@@ -20,13 +23,13 @@
     border-radius: 10px;
     // opacity: 0.1;
     background-color: #c3cbff58;
-    
+
     transition: all .2s ease-in-out;
-    
+
     @media screen and (max-width: 1280px) {
       padding: 20px;
     }
-    
+
     &.dark {
       // display: none;
       background-color: rgba(41, 41, 41, 0.6);
@@ -90,6 +93,7 @@
       align-items: center;
       z-index: 200;
       position: relative;
+
       .itemListHeader {
         // justify-self: start;
         // width: 100%;
@@ -127,7 +131,33 @@
           cursor: pointer;
           position: relative;
 
+          &.active {
+            span {
+              transition: all .2s ease-in-out;
+
+              &:nth-child(1) {
+                // top: 0;
+                left: calc(50% - 20px);
+                top: 18px;
+                transform: rotate(-45deg);
+              }
+
+              &:nth-child(2) {
+                opacity: 0;
+              }
+
+              &:nth-child(3) {
+                // top: 0;
+                left: calc(50% - 20px);
+                bottom: 18px;
+                transform: rotate(45deg);
+              }
+            }
+          }
+
           span {
+            transition: all .2s ease-in-out;
+
             &:nth-child(1) {
               position: absolute;
               width: 100%;
@@ -195,6 +225,7 @@
         @media screen and (max-width: 1280px) {
           display: none;
         }
+
         a {
           background: #131313;
           display: flex;
@@ -204,6 +235,7 @@
           padding: 10px 57px;
           transition: all .3s ease-in-out;
           border-radius: 10px;
+
           &:hover {
             background: #c3cbff;
             background-color: #5d72f3;
