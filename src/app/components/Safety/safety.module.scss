@@ -42,7 +42,9 @@
               line-height: 112%;
               text-align: center;
               color: #27ae60;
-  
+              @media screen and (max-width: 768px) {
+                font-size: 32px;
+              }
               @media screen and (max-width: 480px) {
                 font-size: 18px;
               }
@@ -193,6 +195,9 @@
             line-height: 112%;
             color: #abffcf;
             padding-bottom: 20px;
+            @media screen and (max-width: 760px) {
+              font-size: 32px;
+            }
             @media screen and (max-width: 480px) {
               max-width: 200px;
               font-size: 20px;

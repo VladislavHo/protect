@@ -35,6 +35,10 @@
           font-family: 'Onest', Arial, sans-serif;
           font-weight: 700;
           line-height: 48px;
+          text-align: center;
+          @media screen and (max-width: 768px) {
+            font-size: 32px;
+          }
           @media screen and (max-width: 480px) {
             
             max-width: 200px;

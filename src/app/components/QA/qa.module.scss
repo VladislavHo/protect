@@ -18,6 +18,9 @@
       text-align: center;
       color: #445be7;
       padding-bottom: 45px;
+      @media screen and (max-width: 760px) {
+        font-size: 36px;
+      }
       @media screen and (max-width: 480px) {
         font-size: 24px;
         max-width: 250px;

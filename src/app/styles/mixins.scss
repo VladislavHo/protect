@@ -19,6 +19,9 @@
   color: #27ae60;
   line-height: 60px;
 
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
   @media screen and (max-width: 480px) {
     font-size: 18px;
     line-height: 20px;

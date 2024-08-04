@@ -32,10 +32,10 @@
             text-align: center;
             color: #445be7;
             @media screen and (max-width: 768px) {
-              font-size: 32px;
+              font-size: 36px;
             }
             @media screen and (max-width: 480px) {
-              font-size: 24px;
+              font-size: 28px;
             }
   
             &:nth-child(2) {
@@ -71,6 +71,9 @@
             font-size: 36px;
             text-align: center;
             color: #c3cbff;
+            @media screen and (max-width: 768px) {
+              font-size: 24px;
+            }
             @media screen and (max-width: 480px) {
               max-width: 250px;
               font-size: 18px;
@@ -123,6 +126,9 @@
                 text-align: center;
                 color: #eef0ff;
                 margin-bottom: 16px;
+                @media screen and (max-width: 768px) {
+                  font-size: 36px;
+                }
                 @media screen and (max-width: 480px) {
                   font-size: 16px;
                 }
