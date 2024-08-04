@@ -10,6 +10,9 @@ export default function Devices() {
   const ref = React.useRef(null);
 
   useScrollObserver(ref, setWidthComponets);
+
+
+  
   return (
     <div className={styles.devices}>
       <div className={styles.devicesWrapper} ref={ref} style={{ width: `calc(80% + ${widthComponets}px)` }}>

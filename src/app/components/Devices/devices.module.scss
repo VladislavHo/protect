@@ -14,7 +14,7 @@
     background-color: #445be7;
     border-radius: 10px 10px 0 0;
     position: relative;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       padding-top: 30px;
     }
 
@@ -50,7 +50,9 @@
             border-radius: 10px;
             color: #445be7;
             align-self: center;
-            max-width: 250px;
+            // max-width: 250px;
+            max-width: 415px;
+            padding: 0 10px;
           }
         }
       }
@@ -158,6 +160,7 @@
         padding: 30px;
         @media screen and (max-width: 760px) {
           width: 45%;
+          padding: 15px;
         }
         @media screen and (max-width: 480px) {
           width: 100%;
@@ -170,7 +173,8 @@
           display: flex;
           align-items: center;
           gap: 20px;
-          @media screen and (max-width: 480px) {
+          @media screen and (max-width: 760px) {
+            gap: 20px;
             padding-bottom: 10px;
           }
           span {
@@ -183,7 +187,19 @@
             }
           }
         }
-
+        .buttonWrapper1{
+          button{
+              @media screen and (max-width: 760px) {
+                padding: 5px;
+              }
+              span{
+                @media screen and (max-width: 760px) {
+                  font-size: 22px;
+                }
+              }
+            }
+     
+        }
       }
     }
   }

@@ -14,12 +14,15 @@
     padding: 23px 20px 120px;
 
     position: relative;
+
     @media screen and (max-width: 480px) {
       padding: 23px 20px 10px;
     }
+
     .speed {
       display: flex;
       justify-content: space-between;
+
 
       .titleWrapperFast {
         margin-top: 90px;
@@ -40,6 +43,7 @@
         .span {
           display: block;
           padding: 16px 24px;
+          font-family: var(--font-family);
           font-weight: 700;
           font-size: 48px;
           line-height: 100%;
@@ -82,7 +86,7 @@
           background: rgba(68, 90, 231, 0.3);
           rotate: 10deg;
           border-radius: 10px;
-
+          font-family: var(--font-family);
           position: sticky;
           top: 300px;
         }
@@ -149,9 +153,11 @@
             .center {
               position: relative;
               top: 38px;
+
               @media screen and (max-width: 480px) {
                 top: 10px;
               }
+
               img {
                 position: absolute;
                 top: calc(50% - 58px);
@@ -190,6 +196,7 @@
 
               .speedValue {
                 position: absolute;
+                font-family: var(--font-family);
                 font-weight: 700;
                 font-size: 20px;
                 color: #abffcf;
@@ -283,9 +290,28 @@
       border: 2px dashed #343434;
       border-radius: 10px;
       padding: 30px 20px;
+      position: relative;
+
       @media screen and (max-width: 480px) {
         padding: 10px 20px 0;
         margin-top: 30px;
+      }
+
+      .liener {
+        position: absolute;
+        top: -100px;
+        left: calc(50% - 0px);
+        box-shadow: 0 0 4px 0 rgba(39, 174, 96, 0.8);
+        background: #27ae60;
+        width: 4px;
+        height: 100px;
+        @media screen and (max-width: 1280px) {
+          left: calc(50% - 4px);
+        }
+        @media screen and (max-width: 480px) {
+          height: 50px;
+          top: -50px;
+        }
       }
 
       .titleServiseWrapper {
@@ -303,16 +329,18 @@
           justify-content: center;
           align-items: center;
           gap: 27px;
-          
+
           @media screen and (max-width: 480px) {
             gap: 15px;
             padding: 4px 0;
-            img{
+
+            img {
               width: 43px;
               height: 43px;
             }
-    
+
           }
+
           h2 {
             font-family: var(--font-family);
             font-weight: 700;
@@ -324,9 +352,10 @@
             @media screen and (max-width: 768px) {
               font-size: 32px;
             }
+
             @media screen and (max-width: 480px) {
               font-size: 24px;
-              
+
             }
           }
         }
@@ -348,6 +377,7 @@
           max-width: 400px;
           margin: 30px auto;
         }
+
         @media screen and (max-width: 480px) {
           max-width: 290px;
         }
@@ -362,10 +392,11 @@
           border: 2px dashed #27ae60;
           border-radius: 10px;
           z-index: 1;
+
           @media screen and (max-width: 768px) {
             height: calc(100% - 60px);
             width: calc(100% - 60px);
-        
+
           }
         }
 
@@ -421,6 +452,7 @@
           @include titleTextStyle();
           padding: 46px 0;
           max-width: 700px;
+
           @media screen and (max-width: 480px) {
             padding: 10px 0;
           }
@@ -440,16 +472,20 @@
         z-index: 1;
         position: relative;
         top: -8px;
+
         @media screen and (max-width: 480px) {
           top: -3px;
-          img{
+
+          img {
             width: 200px;
             height: 30px;
-            &:last-child{
+
+            &:last-child {
               height: 45px;
             }
           }
         }
+
         .icon {
           display: flex;
           justify-content: space-between;
@@ -465,11 +501,13 @@
             width: 75px;
             height: 75px;
             position: relative;
+
             @media screen and (max-width: 480px) {
               width: 40px;
               height: 40px;
               border: 2px solid #abffcf;
-              img{
+
+              img {
                 width: 20px;
                 height: 20px;
               }
@@ -477,14 +515,16 @@
 
             &:nth-child(1) {
               left: -34px;
+
               @media screen and (max-width: 480px) {
                 left: -18px;
-                
+
               }
             }
 
             &:nth-child(2) {
               right: -26px;
+
               @media screen and (max-width: 480px) {
                 right: -18px;
 
@@ -499,13 +539,16 @@
         width: 100%;
         position: relative;
         top: -25px;
+
         @media screen and (max-width: 480px) {
           top: -14px;
 
         }
+
         button {
           span {
             font-size: 34px;
+
             @media screen and (max-width: 480px) {
               font-size: 18px;
             }
@@ -521,6 +564,7 @@
       // left: 0;
 
       transform: translate(-48%, 0);
+
       @media screen and (max-width: 768px) {
         display: none;
       }

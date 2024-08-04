@@ -34,6 +34,9 @@ const Fast = observer(() => {
       <div className={styles.fastLayout}>
         <AddresBar theme={"dark"} />
         <div className={styles.speed}>
+
+  
+
           <div className={styles.titleWrapperFast}>
             <span className={styles.span}>Быстрый.</span>
           </div>
@@ -76,6 +79,7 @@ const Fast = observer(() => {
         </div>
 
         <div className={styles.servers}>
+          <div className={styles.liener}></div>
           <ObserverTitleFast />
 
           <div className={styles.flags}>
