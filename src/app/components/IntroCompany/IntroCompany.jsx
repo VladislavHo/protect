@@ -30,8 +30,8 @@ export default function IntroCompany() {
               <div className={styles.keyWrapper}>
                 <Image
                   src={"/svg/Key2.svg"}
-                  width={50}
-                  height={50}
+                  width={35}
+                  height={35}
                   alt="flow"
                 />
               </div>
@@ -46,9 +46,9 @@ export default function IntroCompany() {
               </div>
               <div className={styles.unlockWrapper}>
                 <Image
-                  src={"/img/Unlock.png"}
-                  width={100}
-                  height={115}
+                  src={"/img/Unlock2.png"}
+                  width={140}
+                  height={155}
                   alt="flow"
                 />
               </div>

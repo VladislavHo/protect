@@ -42,7 +42,9 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-
+  &:hover {
+    background: #27402c;
+  }
   @media screen and (max-width: 480px) {
     gap: 10px;
 
@@ -66,7 +68,9 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-
+  &:hover {
+    background: #5d72f3;
+  }
   @media screen and (max-width: 480px) {
     gap: 10px;
 
@@ -114,7 +118,9 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-
+  &:hover {
+    background: #c3cbff;
+  }
   @media screen and (max-width: 480px) {
     gap: 10px;
 

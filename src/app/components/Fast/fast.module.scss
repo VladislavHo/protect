@@ -26,18 +26,15 @@
 
       .titleWrapperFast {
         margin-top: 90px;
-
+        opacity: 0;
+        transition: all 0.3s ease;
+        &.active {
+          opacity: 1;
+        }
         @media screen and (max-width: 1280px) {
           margin-top: 60px;
 
-          span {
-            position: absolute !important;
-            top: 100px !important;
-            // left: 100px;
-            left: 10px;
-            font-size: 24px !important;
-
-          }
+ 
         }
 
         .span {
@@ -57,22 +54,32 @@
 
           position: sticky;
           top: 300px;
+          @media screen and (max-width: 1280px) {
+            font-size: 24px !important;
+            
+          }
+          @media screen and (max-width: 760px) {
+     
+            position: absolute !important;
+            top: 100px !important;
+            left: 10px;
+
+    
+        }
         }
       }
 
-      .titleWrapperPowerful {
+      .titleWrapperSpeed {
         margin-top: 90px;
-
+        opacity: 0;
+        transition: all 1s ease;
+        &.active {
+          opacity: 1;
+        }
         @media screen and (max-width: 1280px) {
           margin-top: 60px;
 
-          span {
-            position: absolute !important;
-            top: 100px !important;
-            right: 10px;
-            font-size: 24px !important;
 
-          }
         }
 
         .span {
@@ -89,6 +96,19 @@
           font-family: var(--font-family);
           position: sticky;
           top: 300px;
+          @media screen and (max-width: 1280px) {
+            font-size: 24px !important;
+            
+          }
+          @media screen and (max-width: 760px) {
+     
+              position: absolute !important;
+              top: 100px !important;
+              right: 10px;
+              font-size: 24px !important;
+  
+      
+          }
         }
 
       }
@@ -283,7 +303,7 @@
 
 
     .servers {
-      max-width: 787px;
+      max-width: 1000px;
       width: 100%;
       margin: 0 auto;
       margin-top: 93px;
@@ -412,23 +432,23 @@
           z-index: 2;
 
           @media screen and (max-width: 768px) {
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
 
             img {
-              width: 50px;
-              height: 50px;
+              width: 40px;
+              height: 40px;
             }
 
           }
 
           @media screen and (max-width: 480px) {
-            width: 63px;
-            height: 63px;
+            width: 50px;
+            height: 50px;
 
             img {
-              width: 30px;
-              height: 30px;
+              width: 25px;
+              height: 25px;
             }
           }
 

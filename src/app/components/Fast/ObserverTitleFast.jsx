@@ -1,15 +1,12 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, {  useRef } from "react";
 import styles from "./fast.module.scss";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
 import useScrollObserver from "../../hook/useScrollObserver";
 
 export default function ObserverTitleFast() {
   const [widthComponets, setWidthComponets] = React.useState(0);
-  // const { ref, inView, entry } = useInView({
-  //   threshold: 0.5,
-  // });
+
 
   const ref = useRef(null);
 

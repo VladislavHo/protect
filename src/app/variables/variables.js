@@ -18,32 +18,44 @@ export const flags = [
     format: 'png'
   },
   {
-    id: 8,
+    id: 4,
     name: 'Flag Italy',
     src: '/img/flags',
     format: 'png'
   },
   {
-    id: 4,
+    id: 5,
     name: 'Flag Germany',
     src: '/img/flags',
     format: 'png'
   },
   {
-    id: 5,
+    id: 6,
     name: 'Flag United Kingdom',
     src: '/img/flags',
     format: 'png'
   },
   {
-    id: 6,
+    id: 7,
     name: 'Flag Netherlands',
     src: '/img/flags',
     format: 'png'
   },
   {
-    id: 7,
+    id: 8,
     name: 'Flag Kazakhstan',
+    src: '/img/flags',
+    format: 'png'
+  },
+  {
+    id: 9,
+    name: 'Flag India',
+    src: '/img/flags',
+    format: 'png'
+  },
+  {
+    id: 10,
+    name: 'Flag Russia',
     src: '/img/flags',
     format: 'png'
   },

@@ -111,7 +111,7 @@ const Safety = observer(() => {
                     className={styles.unlockLogo}
                     src={"/img/Unlock.png"}
                     width={110}
-                    height={110}
+                    height={120}
                     alt="unlock"
                   />
                 </div>

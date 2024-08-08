@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./burger_menu.module.scss";
+import {ArrowSvg} from "../Svg/Svg";
 export default function BurgerMenu({activeBurger}) {
   return (
     <div className={[styles.navBurgerMenu, !activeBurger ? styles.active : ""].join(' ')}>
@@ -15,7 +16,7 @@ export default function BurgerMenu({activeBurger}) {
         <li className={styles.authLinkBurger}>
           <a href="#">
             <span>Начать пользоваться VPN</span>
-            <Image src="/svg/Key.svg" width={24} height={24} alt="arrow" />
+            <ArrowSvg color={"#eef0ff"} />
           </a>
         </li>
       </ul>

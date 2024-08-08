@@ -21,7 +21,7 @@ export default function QA() {
   return (
     <div className={styles.qa}>
       <div className={styles.qaWrapper}>
-        <h2>Частозадаваемые вопросы</h2>
+        <h2>Часто задаваемые вопросы</h2>
 
         <div className={styles.questionsList}>
           {qaList.map((item, index) => (

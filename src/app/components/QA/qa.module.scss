@@ -120,13 +120,7 @@
               height: 35px;
 
             }
-            // svg{
-            //   @media screen and (max-width: 480px) {
-            //     width: 15px;
-            //     height: 15px;
-            //   }
-            // }
-            
+
             &.active {
               rotate: 90deg;
               transition: .3s ease-in-out;

@@ -5,7 +5,8 @@ import styles from './company.module.scss'
 import Safety from '../components/Safety/Safety'
 import QA from '../components/QA/QA'
 import AboutCompany from '../components/AboutCompany/AboutCompany'
-
+import RatesCards from '../components/RatesCards/RatesCards'
+import IntroRates from '../components/IntroRates/IntroRates'
 
 export default function Company() {
   return (
@@ -14,6 +15,8 @@ export default function Company() {
       <InfoCompany />
       <AboutCompany />
       <Safety />
+      <IntroRates />
+      <RatesCards />
       <QA />
     </div>
   )

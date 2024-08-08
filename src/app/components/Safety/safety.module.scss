@@ -171,6 +171,7 @@
 
             .logoUnlockWrapper {
               position: absolute;
+              top: -20px;
               transform: translate(0%, 50%);
               z-index: 1; 
 
@@ -297,6 +298,7 @@
       width: 100%;
 
       button {
+
         span {
           font-size: 36px;
           @media screen and (max-width: 480px) {

@@ -1,29 +1,48 @@
+@import "../../styles/function.scss";
 .footer {
   width: 100%;
   background-color: #f6f5f7;
 
   .footerWrapper {
-    max-width: 1161px;
+    // max-width: 1161px;
     margin: 0 auto;
     background-color: #131313;
     border-radius: 10px 10px 0 0;
-    padding: 30px;
-
+    padding: calc-between-width(1280, 30, 1980, 50);;
+    @media screen and (max-width: 1280px) {
+      padding: 30px;
+    }
     .footerNav {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-bottom: 20px;
+      padding-bottom: calc-between-width(1280, 20, 1980, 40);
+      @media screen and (max-width: 1280px) {
+        padding-bottom: 20px;
+      }
       @media screen and (max-width: 760px) {
         gap: 40px;
       }
       ul {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-
+        // gap: 15px;
+        gap: calc-between-width(1280, 15, 1980, 44);;
+        @media screen and (max-width: 1280px) {
+          gap: 15px;
+        }
         li {
-          
+          color: #c3cbff;
+          // font-size: 18px;
+          font-size: calc-between-width(1280, 18, 1980, 34);
+          font-family: 'Onest',
+          Arial,
+          sans-serif;
+          line-height: 28px;
+          font-weight: 400;
+          @media screen and (max-width: 1280px) {
+            font-size: 18px;
+          }
           &.list {
             position: relative;
             overflow: hidden;
@@ -56,19 +75,16 @@
           &.title {
 
             color: #eef0ff;
-            font-size: 20px;
+            font-size: calc-between-width(1280, 20, 1980, 36);
             font-family: 'Onest', Arial, sans-serif;
             font-weight: 700;
             line-height: 31px;
+            @media screen and (max-width: 1280px) {
+              font-size: 20px;
+            }
           }
 
-          color: #c3cbff;
-          font-size: 18px;
-          font-family: 'Onest',
-          Arial,
-          sans-serif;
-          line-height: 28px;
-          font-weight: 400;
+
 
           a {}
         }
@@ -86,20 +102,43 @@
       }
       .connection {
         display: flex;
-        gap: 30px;
-
-        .logo {}
+        // gap: 30px;
+        gap: calc-between-width(1280, 30, 1980, 60);
+        @media screen and (max-width: 1280px) {
+          gap: 30px;
+        }
+        .logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img{
+            // width: 61px;
+            // height: 61px;
+            width: calc-between-width(1280, 61, 1980, 71);
+            height: calc-between-width(1280, 61, 1980, 71);
+            @media screen and (max-width: 1280px) {
+              width: 61px;
+              height: 61px;
+            }
+          }
+        }
 
         .contacts {
           display: flex;
           flex-direction: column;
-
+          gap: calc-between-width(1280, 10, 1980, 30);
+          @media screen and (max-width: 1280px) {
+            gap: 10px;
+          }
           a {
             color: #c3cbff;
-            font-size: 20px;
+            font-size: calc-between-width(1280, 20, 1980, 36);
             font-family: 'Onest', Arial, sans-serif;
             line-height: 31px;
             font-weight: 400;
+            @media screen and (max-width: 1280px) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -110,37 +149,62 @@
         }
         ul {
           display: flex;
-          gap: 10px;
-
+          gap: calc-between-width(1280, 10, 1980, 20);
+          @media screen and (max-width: 1280px) {
+           gap: 10px;
+          }
           li {
             border-radius: 10px;
             background-color: #f5f5f5;
-            padding: 10px;
-
+            padding: calc-between-width(1280, 10, 1980, 20);;
+            @media screen and (max-width: 1280px) {
+              padding: 10px;
+            }
             a {
               display: flex;
               align-items: center;
-              gap: 5px;
-
+              gap: calc-between-width(1280, 5, 1980, 20);
+              @media screen and (max-width: 1280px) {
+                gap: 5;
+              }
+              img {
+                width: calc-between-width(1280, 25, 1980, 40);
+                height: calc-between-width(1280, 25, 1980, 40);
+                @media screen and (max-width: 1280px) {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
               .title {
                 display: flex;
                 flex-direction: column;
-
+                gap: calc-between-width(1280, 5, 1980, 20);
+                @media screen and (max-width: 1280px) {
+                  gap: 5;
+                }
                 span {
                   &:nth-child(1) {
                     color: #131313;
-                    font-size: 10px;
+                    // font-size: 10px;
+                    font-size: calc-between-width(1280, 10, 1980, 30);
                     font-family: 'Onest', Arial, sans-serif;
                     line-height: 10px;
                     font-weight: 500;
+                    @media screen and (max-width: 1280px) {
+                      font-size: 10px;
+                    }
                   }
 
                   &:nth-child(2) {
                     color: #131313;
-                    font-size: 14px;
+                    font-size: calc-between-width(1280, 14, 1980, 36);;
                     font-family: 'Onest', Arial, sans-serif;
                     line-height: 14px;
                     font-weight: 700;
+                    @media screen and (max-width: 1280px) {
+                      font-size: 14px;
+                      
+                    }
                   }
                 }
               }

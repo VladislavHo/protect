@@ -7,6 +7,9 @@ import state from "../../store/state";
 import { useEffect, useRef, useState } from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import useScrollPosition from "../../hook/useScrollPosition";
+
+import { ArrowSvg } from "../Svg/Svg";
+
 const Header = observer(() => {
   const { activeGreenColor } = state;
   const [activeBurger, setActivBurger] = useState(false);
@@ -44,7 +47,8 @@ const Header = observer(() => {
           <li className={styles.authLink}>
             <a href="">
               <span>Начать пользоваться VPN</span>
-              <Image src="/svg/Key.svg" width={24} height={24} alt="arrow" />
+              {/* <Image src="/svg/Key.svg" width={24} height={24} alt="arrow" /> */}
+              <ArrowSvg color={"#eef0ff"} />
             </a>
           </li>
           <li

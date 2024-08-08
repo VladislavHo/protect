@@ -9,16 +9,28 @@ import ObserverTitleFast from "./ObserverTitleFast";
 import ObserverTitleVpn from "./ObserverTitleVpn";
 import { observer } from "mobx-react-lite";
 import { useInView } from "react-intersection-observer";
-import changeHeaderPosition from "../../hook/changeHeaderPosition";
 import state from "../../store/state";
 const Fast = observer(() => {
-  const { changeOnDarkPosition } = state;
-  // changeHeaderPosition({ref, changeOnDarkPosition});
+
 
   const { ref, inView, entry } = useInView({
     rootMargin: "0px",
     threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
   });
+
+  const {ref : refFastTitle, inView : inViewFastTitle, entry : entryFastTitle} = useInView({
+    rootMargin: "0px",
+    threshold: 0.5,
+    triggerOnce: true,
+
+  })
+  const {ref : refSpeedTitle, inView : inViewSpeedTitle, entry : entrySpeedTitle} = useInView({
+    rootMargin: "0px",
+    threshold: 0.5,
+    triggerOnce: true,
+
+  })
+
 
   useEffect(() => {
     if (inView && entry?.boundingClientRect.top <= 200) {
@@ -36,7 +48,7 @@ const Fast = observer(() => {
 
   
 
-          <div className={styles.titleWrapperFast}>
+          <div className={[styles.titleWrapperFast, inViewFastTitle ? styles.active : ""].join(" ")} ref={refFastTitle}>
             <span className={styles.span}>Быстрый.</span>
           </div>
 
@@ -72,7 +84,7 @@ const Fast = observer(() => {
             </div>
           </div>
 
-          <div className={styles.titleWrapperPowerful}>
+          <div className={[styles.titleWrapperSpeed, inViewSpeedTitle ? styles.active : ""].join(" ")} ref={refSpeedTitle}>
             <span className={styles.span}>Мощный.</span>
           </div>
         </div>
